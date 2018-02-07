@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="author" content="Shawn Namdar">
+      <meta name="description" content="Project 2">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link href="css/style.css" rel="stylesheet">
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <style>
+         @import url('https://fonts.googleapis.com/css?family=Encode+Sans:900|Open+Sans');
+      </style>
+      <link rel="icon" 
+         type="image/png" 
+         href="images/favicon.png">
+      <title>
+         Programmatic Fractals
+      </title>
+   </head>
+   <body>
+      <header>
+         <h1>
+            Programmatic Fractals
+         </h1>
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+               <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                  <li class="nav-item">
+                     <h2>Initial Length</h2>
+                     <div class="slidecontainer">
+                        <input type="range" min="1" max="7" value="4" class="slider" id="lineLengthFactor" aria-label="Change Initial Length">
+                     </div>
+                  </li>
+                  <li class="nav-item">
+                     <h2>Change In Length</h2>
+                     <div class="slidecontainer">
+                        <input type="range" min="5" max="30" value="17.5" class="slider" id="lengthScaleFactor" aria-label="Change the Change In Length">
+                     </div>
+                  </li>
+                  <li class="nav-item">
+                     <h2>Minimum Length</h2>
+                     <div class="slidecontainer">
+                        <input type="range" min="2" max="8" value="5" class="slider" id="minLengthFactor" aria-label="Change Minimum Length">
+                     </div>
+                  </li>
+                  <li class="nav-item">
+                     <h2>Number of Divisions</h2>
+                     <div class="slidecontainer">
+                        <input type="range" min="0" max="6" value="3" class="slider" id="angleDivision" aria-label="Change Number of Divisions">
+                     </div>
+                  </li>
+                  <li class="nav-item">
+                     <h2>Size of Angle</h2>
+                     <div class="slidecontainer">
+                        <input type="range" min="15" max="240" value="120" class="slider" id="angleBoundry" aria-label="Change Size of Angle">
+                     </div>
+                  </li>
+                  <li class="nav-item">
+                     <h2>Color</h2>
+                     <div class="slidecontainer">
+                        <input type="range" min="0" max="360" value="180" class="slider" id="hueFactor" aria-label="Change Color">
+                     </div>
+                  </li>
+                  <li class="nav-item">
+                     <button type="submit" id="resubmitButton" class="btn btn-primary">Redraw!</button>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+      <section aria-label="Fractal Output">
+         <div id="canvasContainer">
+            <canvas id="canvas" width="500" height="500">
+            </canvas>
+         </div>
+         <div class="nav-item">
+            <button type="submit" id="downloadButton" class="btn btn-primary">Download Your Masterpiece!</button>
+         </div>
+      </section>
+      <footer>
+         <div class="footer-container">
+            <p>By Shawn Namdar For INFO 343 Web Dev</p>
+            <p>Original Fractal Method Sourced From <a class="link" aria-label="Fractal Idea Website" href="http://progur.com/2016/10/procedural-generation-create-fractal-trees-javascript.html" > Here </a></p>
+            <p>Favicon fractal by Tom Benneche from the Noun Project</p>
+         </div>
+      </footer>
+      <script src="js/index.js"></script>
+   </body>
+</html>
